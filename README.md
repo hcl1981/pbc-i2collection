@@ -5,11 +5,11 @@ miteinander verbunden sind: Tron (Lightcycle), Pong, Duell, Artillerie,
 Bombing Bob, Schach, Wer-nicht-rechtzeitig, Vier gewinnt und Käsekästchen.
 
 ```bash
-./build.sh          # -> ../dist/i2collection.uf2
+./build.sh          # -> dist/i2collection.uf2
 ```
 
 Gebaut wird über PlatformIO, nicht über das Pico SDK. Einrichtung siehe
-[`../docs/BAUEN.md`](../docs/BAUEN.md).
+[`docs/BAUEN.md`](docs/BAUEN.md).
 
 ## Verkabelung
 
@@ -47,7 +47,7 @@ beide Geräte zurück ins Menü, statt mit stehendem Bild hängen zu bleiben.
 in das Framework-Paket ein. Sie beheben eine Endlosschleife im USB-Interrupt,
 die sonst den ganzen Chip anhält. Deshalb ist die Framework-Version in
 `platformio.ini` festgenagelt — der Patch muss zur Version passen. Näheres in
-[`../docs/BAUEN.md`](../docs/BAUEN.md), Abschnitt „PlatformIO".
+[`docs/BAUEN.md`](docs/BAUEN.md), Abschnitt „PlatformIO".
 
 ## Warum `.cpp` und nicht `.ino`
 
@@ -59,3 +59,10 @@ führt. Als `.cpp` übersetzt PlatformIO direkt als C++ ohne diese Erzeugung.
 
 MIT, siehe `LICENSE`. Verwendet Adafruit GFX und Adafruit ST7789 (beide BSD)
 sowie TinyUSB (MIT).
+
+## Herkunft und Download
+
+Teil der Sammlung für den PicoBoy Color Plus; Übersicht und
+Hardware-Referenz: [pbc-plus](https://github.com/hcl1981/pbc-plus). Die fertige Firmware
+(i2collection.uf2) liegt unter **Releases**. `./build.sh` baut nach `dist/`;
+Werkzeuge und SDK siehe [`docs/BAUEN.md`](docs/BAUEN.md).
